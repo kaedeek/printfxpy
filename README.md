@@ -1,4 +1,4 @@
-# PrintFX
+# Printfxpy
 
 A simple and colorful text printing library for Python.
 
@@ -12,7 +12,7 @@ A simple and colorful text printing library for Python.
 ## Installation
 
 ```bash
-pip install printfx
+pip install printfxpy
 ```
 
 ## Quick Start
