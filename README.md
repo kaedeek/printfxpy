@@ -1,5 +1,10 @@
 # Printfxpy
 
+[![PyPI version](https://badge.fury.io/py/printfxpy.svg)](https://badge.fury.io/py/printfxpy)
+[![Downloads](https://pepy.tech/badge/printfxpy)](https://pepy.tech/project/printfxpy)
+[![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
+[![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
+
 A simple and colorful text printing library for Python.
 
 ## Features
