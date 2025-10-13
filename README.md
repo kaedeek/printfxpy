@@ -17,6 +17,7 @@ Join our Discord server for support, questions, and community discussions:
 ## Features
 
 - 🎨 Support for 16 different colors
+- 🔤 Support for 8 different font styles (Bold, Italic, Underline, etc.)
 - 🚀 Easy to use API
 - 📦 Lightweight and dependency-free
 - 🐍 Python 3.8+ support
@@ -32,11 +33,47 @@ pip install printfxpy
 ```python
 from printfx import PrintFX
 
+# Basic color printing
 printer = PrintFX("RED")
-printer.printfx("Hi")
+printer.printfx("Hello World!")
+
+# With font styles
+bold_printer = PrintFX("GREEN", "BOLD")
+bold_printer.printfx("Bold text")
+
+# Runtime style changes
+printer.printfx("Italic text", font_style="ITALIC")
+printer.printfx("Underlined text", font_style="UNDERLINE")
 ```
 
 ## Available Colors
 
 - `BLACK`, `RED`, `GREEN`, `YELLOW`, `BLUE`, `MAGENTA`, `CYAN`, `WHITE`
 - `BRIGHT_BLACK`, `BRIGHT_RED`, `BRIGHT_GREEN`, `BRIGHT_YELLOW`, `BRIGHT_BLUE`, `BRIGHT_MAGENTA`, `BRIGHT_CYAN`, `BRIGHT_WHITE`
+
+## Available Font Styles
+
+- `NORMAL` - Default text style
+- `BOLD` - Bold text
+- `DIM` - Dimmed text
+- `ITALIC` - Italic text
+- `UNDERLINE` - Underlined text
+- `BLINK` - Blinking text
+- `REVERSE` - Reversed colors
+- `STRIKETHROUGH` - Strikethrough text
+
+## Advanced Usage
+
+```python
+from printfx import PrintFX
+
+# Create printer with default settings
+printer = PrintFX("BLUE")
+
+# Change color and style at runtime
+printer.printfx("Red bold text", color="RED", font_style="BOLD")
+printer.printfx("Green underlined text", color="GREEN", font_style="UNDERLINE")
+
+# Combine multiple effects
+printer.printfx("Magenta italic text", color="MAGENTA", font_style="ITALIC")
+```
