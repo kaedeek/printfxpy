@@ -4,7 +4,7 @@
 [![Downloads](https://pepy.tech/badge/printfxpy)](https://pepy.tech/project/printfxpy)
 [![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
 [![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
-[![Discord](https://img.shields.io/badge/Discord-Support%20Server-7289DA?style=flat&logo=discord)](https://discord.gg/Et2GNZUb)
+[![Discord](https://img.shields.io/badge/Discord-Support%20Server-7289DA?style=flat&logo=discord)](https://discord.gg/cY8QxHN5)
 
 A simple and colorful text printing library for Python.
 
@@ -12,7 +12,7 @@ A simple and colorful text printing library for Python.
 
 Join our Discord server for support, questions, and community discussions:
 
-[![Discord](https://img.shields.io/badge/Discord-Support%20Server-7289DA?style=flat&logo=discord)](https://discord.gg/Et2GNZUb)
+[![Discord](https://img.shields.io/badge/Discord-Support%20Server-7289DA?style=flat&logo=discord)](https://discord.gg/cY8QxHN5)
 
 ## Features
 
