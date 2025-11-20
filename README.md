@@ -6,7 +6,8 @@
 [![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
 [![Discord](https://img.shields.io/badge/Discord-Support%20Server-7289DA?style=flat&logo=discord)](https://discord.gg/cY8QxHN5)
 
-A simple and colorful text printing library for Python.
+A simple, lightweight, and colorful text printing library for Python.
+Supports colors, styles, HTML hex colors, and even gradient text.
 
 ## Support
 
@@ -18,8 +19,9 @@ Join our Discord server for support, questions, and community discussions:
 
 - 🎨 Support for 16 different colors
 - 🔤 Support for 8 different font styles (Bold, Italic, Underline, etc.)
-- 🚀 Easy to use API
-- 📦 Lightweight and dependency-free
+- 🌈 2-color gradient printing using HTML hex colors (#RRGGBB)
+- 🔧 Runtime color & style overrides
+- 📦 Zero dependencies
 - 🐍 Python 3.8+ support
 
 ## Installation
@@ -38,12 +40,13 @@ printer = PrintFX("RED")
 printer.printfx("Hello World!")
 
 # With font styles
-bold_printer = PrintFX("GREEN", "BOLD")
-bold_printer.printfx("Bold text")
+bold = PrintFX("GREEN", "BOLD")
+bold.printfx("Bold text")
 
 # Runtime style changes
 printer.printfx("Italic text", font_style="ITALIC")
 printer.printfx("Underlined text", font_style="UNDERLINE")
+
 ```
 
 ## Available Colors
@@ -61,6 +64,20 @@ printer.printfx("Underlined text", font_style="UNDERLINE")
 - `BLINK` - Blinking text
 - `REVERSE` - Reversed colors
 - `STRIKETHROUGH` - Strikethrough text
+
+## Gradient Text
+
+```python
+from printfx import PrintFX
+
+printer = PrintFX()
+
+printer.gradient(
+    "Gradient Text Example!",
+    start="#ff0000",
+    end="#0000ff"
+)
+```
 
 ## Advanced Usage
 

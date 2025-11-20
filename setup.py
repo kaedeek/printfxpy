@@ -5,7 +5,7 @@ with open("README.md", encoding="utf-8") as f:
 
 setup(
     name="printfxpy",
-    version="1.1.8",
+    version="1.2.1",
     description="A simple and colorful text printing library for Python",
     long_description=long_description,
     long_description_content_type="text/markdown",

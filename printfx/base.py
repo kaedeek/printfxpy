@@ -16,6 +16,10 @@ class PrintFX:
         hex_color = color.lstrip('#')
         r, g, b = tuple(int(hex_color[i:i+2], 16) for i in (0, 2, 4))
         return f"\033[38;2;{r};{g};{b}m"
+    
+    def _hex_to_rgb(self, hex_color: str):
+        hex_color = hex_color.lstrip('#')
+        return tuple(int(hex_color[i:i+2], 16) for i in (0, 2, 4))
 
     def printfx(self, text: str, color: Optional[str] = None, font_style: Optional[str] = None, end: str = "\n") -> None:
         if color:
@@ -35,3 +39,24 @@ class PrintFX:
         
         reset_code = '\033[0m'
         print(f"{color_code}{font_code}{text}{reset_code}", end=end)
+
+    def gradient(self, text: str, start: str, end: str, end_char: str = "\n"):
+        if not (self._is_html_color(start) and self._is_html_color(end)):
+            raise ValueError("Gradient colors must be HTML hex colors like #RRGGBB")
+        
+        r1, g1, b1 = self._hex_to_rgb(start)
+        r2, g2, b2 = self._hex_to_rgb(end)
+        
+        length = max(len(text), 1)
+        result = ""
+
+        for i, ch in enumerate(text):
+            r = r1 + (r2 - r1) * i // (length - 1 or 1)
+            g = g1 + (g2 - g1) * i // (length - 1 or 1)
+            b = b1 + (b2 - b1) * i // (length - 1 or 1)
+
+            color_code = f"\033[38;2;{r};{g};{b}m"
+            result += f"{color_code}{ch}"
+
+        reset_code = "\033[0m"
+        print(result + reset_code, end=end_char)
